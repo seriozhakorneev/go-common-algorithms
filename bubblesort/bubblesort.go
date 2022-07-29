@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package bubblesort
 
 // better version
 func better(a []int) {
@@ -37,11 +33,4 @@ func mine(a []int) {
 			break
 		}
 	}
-}
-
-func main() {
-	a := []int{9, 10, 11, 224, 8, 7, 6, 5, 4, 3, 2, 1, 0}
-	better(a)
-	//mine(a)
-	fmt.Println(a)
 }

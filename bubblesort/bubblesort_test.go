@@ -1,4 +1,4 @@
-package main
+package bubblesort
 
 import (
 	"math/rand"
