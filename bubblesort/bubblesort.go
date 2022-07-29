@@ -1,13 +1,13 @@
 package bubblesort
 
-// better version
-func better(a []int) {
+// notMine version
+func notMine(a []int) {
 	for i := 1; i < len(a); i++ {
 		for j := 0; j < len(a)-1; j++ {
 			if a[j] > a[j+1] {
-				swap := a[j]
+				tmp := a[j]
 				a[j] = a[j+1]
-				a[j+1] = swap
+				a[j+1] = tmp
 			}
 		}
 	}
@@ -23,9 +23,9 @@ func mine(a []int) {
 		var swapped bool
 		for i, el := range a[:len(a)-1] {
 			if el > a[i+1] || i == len(a)-1 {
-				swap := a[i]
+				tmp := a[i]
 				a[i] = a[i+1]
-				a[i+1] = swap
+				a[i+1] = tmp
 				swapped = true
 			}
 		}
