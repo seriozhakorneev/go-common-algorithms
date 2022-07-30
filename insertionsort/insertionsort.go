@@ -6,7 +6,7 @@ func mine(slice []int) {
 		tmp := slice[i]
 		if tmp > slice[i+1] {
 			slice[i], slice[i+1] = slice[i+1], tmp
-			// this part not correct
+			// this part is not correct
 			//----------------------
 			for j := range slice[:i] {
 				if slice[j] > slice[i] {
@@ -20,10 +20,8 @@ func mine(slice []int) {
 	}
 }
 
-// TODO: разобрать
 func notMine(slice []int) {
 	for i := 1; i < len(slice); i++ {
-
 		j := i
 		for j > 0 && slice[j-1] > slice[j] {
 			tmp := slice[j]
