@@ -3,7 +3,6 @@ package bubblesort
 // notMine version
 func notMine(a []int) {
 	for i := 1; i < len(a); i++ {
-		// TODO: есть ли тут лишние итерации и нужны ли они
 		for j := 0; j < len(a)-1; j++ {
 			if a[j] > a[j+1] {
 				tmp := a[j]
