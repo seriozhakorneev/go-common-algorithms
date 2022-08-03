@@ -1,7 +1,6 @@
 package insertionsort
 
-// mine and not really correct one but result is same
-func mine(slice []int) {
+func v1(slice []int) {
 	for i := 0; i < len(slice)-1; i++ {
 		tmp := slice[i]
 		if tmp > slice[i+1] {
@@ -20,7 +19,7 @@ func mine(slice []int) {
 	}
 }
 
-func notMine(slice []int) {
+func v2(slice []int) {
 	for i := 1; i < len(slice); i++ {
 		j := i
 		for j > 0 && slice[j-1] > slice[j] {
