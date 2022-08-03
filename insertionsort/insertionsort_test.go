@@ -6,13 +6,6 @@ import (
 )
 
 func TestInsertion(t *testing.T) {
-	tests.Sort(t, mine)
-	tests.Sort(t, notMine)
+	tests.Sort(t, v1)
+	tests.Sort(t, v2)
 }
-
-//func TestName(t *testing.T) {
-//	a := []int{52, 15, 3, 6, 23, 9000, 47, 435, 1, 234}
-//	notMine(a)
-//
-//	fmt.Println(a)
-//}
