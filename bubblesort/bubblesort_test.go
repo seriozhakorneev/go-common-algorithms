@@ -1,7 +1,7 @@
 package bubblesort
 
 import (
-	"go-common-algorithms/tests"
+	"github.com/seriozhakorneev/go-common-algorithms/tests"
 	"testing"
 )
 
