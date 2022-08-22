@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func testBTree() *binarytree.Node[string] {
+func testBinaryTree() *binarytree.Node[string] {
 	t := binarytree.NewTree("F")
 
 	t.Root.Left = &binarytree.Node[string]{Data: "B"}
@@ -24,7 +24,7 @@ func testBTree() *binarytree.Node[string] {
 
 func TestLevelOrder(t *testing.T) {
 	expected := []string{"F", "B", "G", "A", "D", "I", "C", "E", "H"}
-	visited := LevelOrder(testBTree())
+	visited := LevelOrder(testBinaryTree())
 
 	if !reflect.DeepEqual(expected, visited) {
 		t.Fatalf("Expected visited: %v\n Got: %v", expected, visited)

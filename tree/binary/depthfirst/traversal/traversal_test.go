@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func testBTree() *binarytree.Node[string] {
+func testBinaryTree() *binarytree.Node[string] {
 	t := binarytree.NewTree("F")
 
 	t.Root.Left = &binarytree.Node[string]{Data: "B"}
@@ -24,7 +24,7 @@ func testBTree() *binarytree.Node[string] {
 
 func TestPreOrder(t *testing.T) {
 	expected := []string{"F", "B", "A", "D", "C", "E", "G", "I", "H"}
-	stack := PreOrder[string](testBTree())
+	stack := PreOrder[string](testBinaryTree())
 
 	if !reflect.DeepEqual(expected, stack) {
 		t.Fatalf("Expected stack: %v\n Got: %v", expected, stack)
@@ -33,7 +33,7 @@ func TestPreOrder(t *testing.T) {
 }
 func TestInOrder(t *testing.T) {
 	expected := []string{"A", "B", "C", "D", "E", "F", "G", "H", "I"}
-	stack := InOrder[string](testBTree())
+	stack := InOrder[string](testBinaryTree())
 
 	if !reflect.DeepEqual(expected, stack) {
 		t.Fatalf("Expected stack: %v\n Got: %v", expected, stack)
@@ -41,7 +41,7 @@ func TestInOrder(t *testing.T) {
 }
 func TestPostOrder(t *testing.T) {
 	expected := []string{"A", "C", "E", "D", "B", "H", "I", "G", "F"}
-	stack := PostOrder[string](testBTree())
+	stack := PostOrder[string](testBinaryTree())
 
 	if !reflect.DeepEqual(expected, stack) {
 		t.Fatalf("Expected stack: %v\n Got: %v", expected, stack)
