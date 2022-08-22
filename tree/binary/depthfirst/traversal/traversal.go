@@ -1,4 +1,4 @@
-package depthfirst
+package traversal
 
 import "github.com/seriozhakorneev/go-data-structures/trees/binarytree"
 
