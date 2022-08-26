@@ -1,7 +1,7 @@
 package linkedlistmerge
 
 import (
-	sll "github.com/seriozhakorneev/go-data-structures/singlylinkedlist"
+	sll "github.com/seriozhakorneev/go-data-structures/linkedlist/singlylinkedlist"
 	"reflect"
 	"testing"
 )
