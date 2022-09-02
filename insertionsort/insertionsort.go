@@ -1,25 +1,6 @@
 package insertionsort
 
-func v1(slice []int) {
-	for i := 0; i < len(slice)-1; i++ {
-		tmp := slice[i]
-		if tmp > slice[i+1] {
-			slice[i], slice[i+1] = slice[i+1], tmp
-			// this part is not correct
-			//----------------------
-			for j := range slice[:i] {
-				if slice[j] > slice[i] {
-					tmp = slice[i]
-					slice[i] = slice[j]
-					slice[j] = tmp
-				}
-			}
-			//----------------------
-		}
-	}
-}
-
-func v2(slice []int) {
+func sort(slice []int) {
 	for i := 1; i < len(slice); i++ {
 		j := i
 		for j > 0 && slice[j-1] > slice[j] {

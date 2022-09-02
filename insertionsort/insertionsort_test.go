@@ -6,6 +6,5 @@ import (
 )
 
 func TestInsertion(t *testing.T) {
-	tests.Sort(t, v1)
-	tests.Sort(t, v2)
+	tests.Sort(t, sort)
 }
