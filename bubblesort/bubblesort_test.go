@@ -1,11 +1,11 @@
 package bubblesort
 
 import (
-	"go-common-algorithms/tests"
+	"github.com/seriozhakorneev/go-common-algorithms/tests"
 	"testing"
 )
 
 func TestBubbleSort(t *testing.T) {
-	tests.Sort(t, mine)
-	tests.Sort(t, notMine)
+	tests.Sort(t, v1)
+	tests.Sort(t, v2)
 }

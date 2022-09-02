@@ -1,7 +1,6 @@
 package bubblesort
 
-// notMine version
-func notMine(a []int) {
+func v1(a []int) {
 	for i := 1; i < len(a); i++ {
 		for j := 0; j < len(a)-1; j++ {
 			if a[j] > a[j+1] {
@@ -13,8 +12,7 @@ func notMine(a []int) {
 	}
 }
 
-// mine version
-func mine(a []int) {
+func v2(a []int) {
 	if len(a) < 1 {
 		return
 	}
