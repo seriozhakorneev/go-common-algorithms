@@ -6,6 +6,8 @@ import (
 )
 
 func TestBubbleSort(t *testing.T) {
+	t.Parallel()
+
 	tests.Sort(t, v1)
 	tests.Sort(t, v2)
 }

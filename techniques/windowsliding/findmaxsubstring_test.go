@@ -5,6 +5,8 @@ import (
 )
 
 func TestSlidingWindowFindMaxSubstring(t *testing.T) {
+	t.Parallel()
+
 	expectedResults := map[string]string{
 		"abcabcbb": "abc",
 		"":         "",

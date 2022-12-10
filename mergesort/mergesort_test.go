@@ -6,5 +6,7 @@ import (
 )
 
 func TestMerge(t *testing.T) {
+	t.Parallel()
+
 	tests.Sort(t, sort)
 }

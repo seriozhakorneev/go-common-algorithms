@@ -7,6 +7,8 @@ import (
 )
 
 func TestMergeTwoLists(t *testing.T) {
+	t.Parallel()
+
 	type testData struct{ list1, list2, expectedResult []int }
 	testsData := []testData{
 		{

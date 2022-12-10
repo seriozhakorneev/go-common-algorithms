@@ -6,6 +6,8 @@ import (
 )
 
 func TestTwoSum(t *testing.T) {
+	t.Parallel()
+
 	tests := []struct {
 		nums, expectedResult []int
 		target               int
