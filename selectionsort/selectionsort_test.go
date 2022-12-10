@@ -6,5 +6,7 @@ import (
 )
 
 func TestSelection(t *testing.T) {
+	t.Parallel()
+
 	tests.Sort(t, sort)
 }

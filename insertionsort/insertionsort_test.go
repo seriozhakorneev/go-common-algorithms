@@ -6,5 +6,7 @@ import (
 )
 
 func TestInsertion(t *testing.T) {
-	tests.Sort(t, sort)
+	t.Parallel()
+
+	tests.Sort(t, Sort)
 }

@@ -5,6 +5,7 @@ import (
 )
 
 func TestCoinChange(t *testing.T) {
+	t.Parallel()
 
 	type testCoinChange struct {
 		coins                  []int

@@ -23,6 +23,8 @@ func testBinaryTree() *binarytree.Node[string] {
 }
 
 func TestLevelOrder(t *testing.T) {
+	t.Parallel()
+
 	expected := []string{"F", "B", "G", "A", "D", "I", "C", "E", "H"}
 	visited := LevelOrder(testBinaryTree())
 

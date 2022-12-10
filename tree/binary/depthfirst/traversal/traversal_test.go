@@ -23,6 +23,8 @@ func testBinaryTree() *binarytree.Node[string] {
 }
 
 func TestPreOrder(t *testing.T) {
+	t.Parallel()
+
 	expected := []string{"F", "B", "A", "D", "C", "E", "G", "I", "H"}
 	stack := PreOrder[string](testBinaryTree())
 
@@ -32,6 +34,8 @@ func TestPreOrder(t *testing.T) {
 
 }
 func TestInOrder(t *testing.T) {
+	t.Parallel()
+
 	expected := []string{"A", "B", "C", "D", "E", "F", "G", "H", "I"}
 	stack := InOrder[string](testBinaryTree())
 
@@ -40,6 +44,8 @@ func TestInOrder(t *testing.T) {
 	}
 }
 func TestPostOrder(t *testing.T) {
+	t.Parallel()
+
 	expected := []string{"A", "C", "E", "D", "B", "H", "I", "G", "F"}
 	stack := PostOrder[string](testBinaryTree())
 

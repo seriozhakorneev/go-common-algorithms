@@ -5,6 +5,8 @@ import (
 )
 
 func TestRecursion(t *testing.T) {
+	t.Parallel()
+
 	seq := []int{1, 1, 2, 3, 5, 8, 13, 21, 34, 55}
 
 	for i := 0; i < len(seq); i++ {
@@ -16,6 +18,8 @@ func TestRecursion(t *testing.T) {
 }
 
 func TestMemoised(t *testing.T) {
+	t.Parallel()
+
 	seq := []int{1, 1, 2, 3, 5, 8, 13, 21, 34, 55}
 
 	memo := make(map[int]int)
@@ -35,6 +39,8 @@ func TestMemoised(t *testing.T) {
 }
 
 func TestBottomUp(t *testing.T) {
+	t.Parallel()
+
 	seq := []int{1, 1, 2, 3, 5, 8, 13, 21, 34, 55}
 
 	for i := 0; i < len(seq); i++ {

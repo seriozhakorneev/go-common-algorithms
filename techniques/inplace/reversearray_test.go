@@ -6,6 +6,8 @@ import (
 )
 
 func TestReverseArray(t *testing.T) {
+	t.Parallel()
+
 	type testData struct{ input, expectedResult []int }
 	testsData := []testData{
 		{
