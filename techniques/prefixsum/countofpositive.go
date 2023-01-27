@@ -6,7 +6,6 @@ package prefixsum
 // return  []int{1, 2, 1, 3}
 
 func countOfPositive(nums []int, indexes [][]int) []int {
-
 	// making a slice with count of positive digits on i position
 	//    [2, -1, 2, -2, 3] -- nums
 	// [0, 1,  1, 2,  2, 3] -- how many positive elements on i position(inclusive)

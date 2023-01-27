@@ -1,7 +1,6 @@
 package main
 
 func sort(a []int) {
-
 	for i := 0; i < len(a); i++ {
 		min := i
 

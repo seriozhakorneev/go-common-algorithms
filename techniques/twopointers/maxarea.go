@@ -2,7 +2,6 @@ package twopointers
 
 // https://leetcode.com/problems/container-with-most-water/
 func maxArea(height []int) int {
-
 	a, b, max := 0, len(height)-1, 0
 
 	for a < b {

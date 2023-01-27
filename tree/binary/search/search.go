@@ -5,7 +5,6 @@ import (
 )
 
 func search(root *binarytree.Node[int], target int) *binarytree.Node[int] {
-
 	var rec func(node *binarytree.Node[int]) *binarytree.Node[int]
 	rec = func(node *binarytree.Node[int]) *binarytree.Node[int] {
 		if node == nil {

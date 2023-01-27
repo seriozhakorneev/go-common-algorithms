@@ -16,7 +16,6 @@ func TestSearch(t *testing.T) {
 
 	for _, test := range tests {
 		for expectedIndex, target := range test {
-
 			index := search(test, target)
 
 			if expectedIndex != index {
