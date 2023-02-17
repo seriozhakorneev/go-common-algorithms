@@ -1,22 +1,23 @@
 package binary
 
 import (
-	"github.com/seriozhakorneev/go-data-structures/trees/binarytree"
+	"github.com/seriozhakorneev/go-data-structures/trees/btree"
 )
 
-func search(root *binarytree.Node[int], target int) *binarytree.Node[int] {
+func search(root *btree.Node, target int) *btree.Node {
+	var rec func(node *btree.Node) *btree.Node
 
-	var rec func(node *binarytree.Node[int]) *binarytree.Node[int]
-	rec = func(node *binarytree.Node[int]) *binarytree.Node[int] {
+	rec = func(node *btree.Node) *btree.Node {
 		if node == nil {
 			return nil
-		} else if target == node.Data {
+		} else if target == node.Value {
 			return node
-		} else if target > node.Data {
+		} else if target > node.Value {
 			return rec(node.Right)
 		} else {
 			return rec(node.Left)
 		}
 	}
+
 	return rec(root)
 }

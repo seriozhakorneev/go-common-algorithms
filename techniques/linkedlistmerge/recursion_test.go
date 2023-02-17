@@ -56,7 +56,7 @@ func fillWithIntegers(a ...int) *sll.Node[int] {
 	if len(a) == 0 {
 		return nil
 	}
-	node := &sll.Node[int]{Val: a[0]}
+	node := &sll.Node[int]{Value: a[0]}
 	node.Next = fillWithIntegers(a[1:]...)
 	return node
 }
@@ -65,6 +65,6 @@ func llToArr(node *sll.Node[int]) (arr []int) {
 	if node == nil {
 		return nil
 	}
-	arr = append(arr, node.Val)
+	arr = append(arr, node.Value)
 	return append(arr, llToArr(node.Next)...)
 }
