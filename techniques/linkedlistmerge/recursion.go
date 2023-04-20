@@ -13,7 +13,7 @@ func mergeTwoLists(
 		return list1
 	}
 
-	if list1.Val < list2.Val {
+	if list1.Value < list2.Value {
 		list1.Next = mergeTwoLists(list1.Next, list2)
 		return list1
 	}

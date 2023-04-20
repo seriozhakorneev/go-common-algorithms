@@ -2,11 +2,12 @@ package traversal
 
 import (
 	"github.com/seriozhakorneev/go-data-structures/trees/binarytree"
+
 	"reflect"
 	"testing"
 )
 
-func testBinaryTree() *binarytree.Node[string] {
+func createBinaryTree() *binarytree.Node[string] {
 	t := binarytree.NewTree("F")
 
 	t.Root.Left = &binarytree.Node[string]{Data: "B"}
@@ -26,7 +27,7 @@ func TestPreOrder(t *testing.T) {
 	t.Parallel()
 
 	expected := []string{"F", "B", "A", "D", "C", "E", "G", "I", "H"}
-	stack := PreOrder[string](testBinaryTree())
+	stack := PreOrder[string](createBinaryTree())
 
 	if !reflect.DeepEqual(expected, stack) {
 		t.Fatalf("Expected stack: %v\n Got: %v", expected, stack)
@@ -37,7 +38,7 @@ func TestInOrder(t *testing.T) {
 	t.Parallel()
 
 	expected := []string{"A", "B", "C", "D", "E", "F", "G", "H", "I"}
-	stack := InOrder[string](testBinaryTree())
+	stack := InOrder[string](createBinaryTree())
 
 	if !reflect.DeepEqual(expected, stack) {
 		t.Fatalf("Expected stack: %v\n Got: %v", expected, stack)
@@ -47,7 +48,7 @@ func TestPostOrder(t *testing.T) {
 	t.Parallel()
 
 	expected := []string{"A", "C", "E", "D", "B", "H", "I", "G", "F"}
-	stack := PostOrder[string](testBinaryTree())
+	stack := PostOrder[string](createBinaryTree())
 
 	if !reflect.DeepEqual(expected, stack) {
 		t.Fatalf("Expected stack: %v\n Got: %v", expected, stack)
